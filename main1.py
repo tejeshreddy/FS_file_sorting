@@ -152,11 +152,22 @@ for i in file_creation_date:
 		file_date_list.append(i)
 
 def file_type():
-    print ("value is:" + variable1.get())
+	f_get_type=variable1.get()
+	file5 = open(filename4,"r")
+	for l in file5:
+		f_type,f_name = l.split("|")
+		if (f_type == f_get_type):
+			print(f_name)
+	file5.close()
 
 def owner_type():
-    print ("value is:" + variable2.get())
-
+    f_get_date=variable2.get()
+    file6 = open(filename3,"r")
+    for m in file6:
+    	f_date,f_name= m.split('|')
+    	if(f_date == f_get_date):
+    		print(f_name)
+    		
 def get_two():
 		option=e2.get()
 
